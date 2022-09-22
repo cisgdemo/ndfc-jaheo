@@ -1,0 +1,12 @@
+---
+- name: NDFC Connectivity Test
+  #hosts: ndfc_cisg_lab
+  hosts: 10.70.138.163
+  connection: ansible.netcommon.httpapi
+  gather_facts: true
+
+  tasks:
+  - name: GET info from NDFC
+    cisco.dcnm.dcnm_rest:
+      method: GET
+      path: /rest/control/fabrics
