@@ -1,7 +1,6 @@
 ---
 - name: NDFC Connectivity Test
-  #hosts: ndfc_cisg_lab
-  hosts: 10.70.138.163
+  hosts: ndfc_cisg_lab
   connection: ansible.netcommon.httpapi
   gather_facts: true
 
